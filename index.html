@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light only">
+    <meta name="description" content="Meta Ads Mastery eBook by Rishabh Shukla — Learn to run profitable Facebook & Instagram Ads and build a Shopify store with consistent sales.">
+    <title>Meta Ads Mastery — Run Profitable Facebook & Instagram Ads | Rishabh Shukla</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'PASTE_YOUR_PIXEL_ID_HERE');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=PASTE_YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F7F4EF;
+            --bg-card: #FFFFFF;
+            --ink: #1A1A18;
+            --ink-soft: #4A4742;
+            --ink-mute: #6B6760;
+            --claude: #D97757;
+            --claude-deep: #C2410C;
+            --claude-soft: #F5E6DE;
+            --claude-tint: #FBF1EC;
+            --line: #E9E2D8;
+            --meta: #1877F2;
+            --green: #16A34A;
+            --gold: #E0A82E;
+            --radius: 18px;
+            --radius-sm: 12px;
+            --shadow: 0 10px 30px rgba(40, 30, 20, .08);
+            --shadow-soft: 0 4px 16px rgba(40, 30, 20, .06);
+            --maxw: 1080px;
+            --font: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box }
+        html { scroll-behavior: smooth }
+        body { font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        img { max-width: 100%; display: block; height: auto }
+        a { text-decoration: none; color: inherit }
+        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px }
+        .section { padding: 28px 0 }
+
+        @media(max-width:640px) {
+            .section { padding: 14px 0 }
+            .wrap { padding: 0 20px }
+            .hero { padding-top: 28px; padding-bottom: 16px }
+            .hero h1 { line-height: 1.25 }
+        }
+
+        /* ===== TOP STRIP ===== */
+        .topbar { background: linear-gradient(90deg, var(--claude), var(--claude-deep)); color: #fff; text-align: center; padding: 10px 16px; font-size: 13.5px; font-weight: 600; letter-spacing: .2px; display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; }
+        .topbar .stars { color: #FFE08A; letter-spacing: 1px }
+        @media(max-width:640px) { .topbar { font-size: 12px; gap: 8px } }
+
+        /* ===== HERO ===== */
+        .hero { padding-top: 26px; padding-bottom: 30px; text-align: center }
+        .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--claude-soft); color: var(--claude-deep); border: 1px solid #EED8CC; font-weight: 700; font-size: 13px; letter-spacing: .3px; padding: 8px 16px; border-radius: 999px; margin-bottom: 22px; }
+        .hero h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.14; font-weight: 800; letter-spacing: -.5px; max-width: 940px; margin: 0 auto 16px; }
+        .hero h1 .hl-blue { background-color: var(--claude); color: #fff; padding: 2px 6px; border-radius: 6px; display: inline-block; margin-bottom: 6px }
+        .hero .sub { font-size: clamp(15px, 2.2vw, 18px); color: var(--ink-soft); max-width: 680px; margin: 0 auto 8px; font-weight: 500; }
+        .note { font-size: 14px; color: var(--ink-mute); padding-top: 5px; margin-bottom: 26px; text-align: center }
+        .hero .note { font-size: 14px; color: var(--ink-mute); margin-bottom: 26px; text-align: center }
+
+        /* ===== HERO GRID ===== */
+        .hero-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 30px; align-items: center; margin-top: 20px; }
+        .hero-right { display: flex; flex-direction: column; gap: 16px; text-align: center; }
+        .hero-right .note { text-align: center }
+        @media(max-width:768px) { .hero-grid { grid-template-columns: 1fr; gap: 20px } }
+
+        /* ===== BOOK COVER MOCKUP (no image needed) ===== */
+        .book-cover {
+            aspect-ratio: 3/4;
+            max-width: 320px;
+            margin: 0 auto;
+            border-radius: 12px;
+            background: linear-gradient(160deg, var(--claude-deep), var(--claude));
+            box-shadow: var(--shadow);
+            border: 1px solid var(--line);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 26px 22px;
+            position: relative;
+            overflow: hidden;
+        }
+        .book-cover::before {
+            content: "";
+            position: absolute; inset: 10px;
+            border: 1px solid rgba(255,255,255,.35);
+            border-radius: 6px;
+            pointer-events: none;
+        }
+        .book-cover .bc-tag { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .9 }
+        .book-cover .bc-title { font-size: 26px; font-weight: 900; line-height: 1.15; margin-top: 10px }
+        .book-cover .bc-sub { font-size: 13px; opacity: .92; margin-top: 10px; font-weight: 600 }
+        .book-cover .bc-author { font-size: 13px; font-weight: 700; margin-top: auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.3) }
+
+        /* ===== PRICE CARD ===== */
+        .price-card { display: flex; align-items: center; justify-content: center; gap: 16px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-soft); padding: 18px; }
+        .price-card .now { font-size: 34px; font-weight: 900; color: var(--claude-deep) }
+        .price-card .was { font-size: 18px; color: var(--ink-mute); text-decoration: line-through; font-weight: 600 }
+        .price-card .off { background: var(--green); color: #fff; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px }
+
+        .dm-info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .dm-info-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-soft); padding: 16px; }
+        .dm-info-card .dm-label { color: var(--ink-mute); font-size: 13px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
+        .dm-info-card .dm-value { font-size: 18px; font-weight: 700; color: var(--ink); }
+
+        .cta-big {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: var(--claude); color: #fff; font-weight: 700; font-size: 18px; padding: 18px 24px;
+            border-radius: 12px; border: none; cursor: pointer; box-shadow: 0 10px 24px rgba(217, 119, 87, .25);
+            transition: transform .2s, box-shadow .2s; width: 100%; text-align: center; position: relative;
+            overflow: hidden; isolation: isolate; animation: cta-pulse 5s ease-in-out infinite;
+        }
+        .cta-big:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(217, 119, 87, .35) }
+        .cta-big::after {
+            content: ""; position: absolute; top: 0; left: -150%; width: 50%; height: 100%; pointer-events: none;
+            background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.45) 45%, rgba(255,255,255,0) 100%);
+            transform: skewX(-20deg); animation: btn-shine 3.6s ease-in-out infinite; animation-delay: 1s;
+        }
+        @keyframes btn-shine { 0% { left: -150% } 55% { left: 130% } 100% { left: 130% } }
+        @keyframes cta-pulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.01) } }
+        .cta-big small { font-size: 13px; font-weight: 500; opacity: .9; margin-top: 4px }
+
+        .cta-block { background: linear-gradient(135deg, var(--claude-tint), #fff); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; text-align: center; box-shadow: var(--shadow-soft); max-width: 720px; margin: 0 auto; }
+        .cta-block .big { font-size: clamp(17px, 2.4vw, 21px); font-weight: 800; margin-bottom: 6px }
+        .cta-block .small { font-size: 14px; color: var(--ink-mute); margin-bottom: 18px }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; background: var(--claude); color: #fff; font-weight: 700; font-size: 17px; letter-spacing: .3px; padding: 16px 42px; border-radius: 12px; border: none; cursor: pointer; box-shadow: 0 10px 24px rgba(217, 119, 87, .25); transition: transform .2s, box-shadow .2s; position: relative; overflow: hidden; }
+        .btn::after { content: ""; position: absolute; top: 0; left: -150%; width: 50%; height: 100%; pointer-events: none; background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.45) 45%, rgba(255,255,255,0) 100%); transform: skewX(-20deg); animation: btn-shine 3.6s ease-in-out infinite; animation-delay: 1s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(217, 119, 87, .35) }
+        .btn.full { width: 100%; max-width: 420px }
+
+        .shead { text-align: center; margin-bottom: 34px }
+        .shead h2 { font-size: clamp(23px, 3.6vw, 34px); font-weight: 800; letter-spacing: -.4px; line-height: 1.18; max-width: 820px; margin: 0 auto 10px }
+        .shead h2 .hl { color: var(--claude) }
+        .shead p { font-size: 15.5px; color: var(--ink-mute); max-width: 600px; margin: 0 auto }
+
+        /* ===== STATS STRIP (real case-study numbers, no images needed) ===== */
+        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px }
+        @media(max-width:740px) { .stat-grid { grid-template-columns: repeat(2, 1fr) } }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: var(--shadow-soft); padding: 22px 14px; text-align: center; }
+        .stat-card .num { font-size: clamp(22px,3vw,30px); font-weight: 900; color: var(--claude-deep) }
+        .stat-card .lbl { font-size: 13px; color: var(--ink-mute); font-weight: 600; margin-top: 4px }
+
+        .ratingline { text-align: center; margin-top: 26px }
+        .ratingline .stars { color: var(--gold); font-size: 26px; letter-spacing: 3px }
+        .ratingline .score { font-weight: 800; font-size: 18px; margin-top: 4px }
+        .ratingline .count { color: var(--ink-mute); font-size: 14px }
+
+        /* ===== CORE / TOOLS ===== */
+        .claude-core { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 26px; box-shadow: var(--shadow-soft); display: flex; gap: 24px; align-items: center; margin-bottom: 24px; }
+        @media(max-width:680px) { .claude-core { flex-direction: column; text-align: center; padding: 26px 20px } }
+        .claude-core .logo { width: 96px; height: 96px; flex: 0 0 96px; border-radius: 20px; background: var(--claude-soft); display: flex; align-items: center; justify-content: center; border: 1px solid #EED8CC; font-size: 40px; }
+        .claude-core h3 { font-size: 13px; font-weight: 800; color: var(--claude-deep); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 4px }
+        .claude-core h4 { font-size: 21px; font-weight: 800; margin-bottom: 8px }
+        .claude-core p { font-size: 15px; color: var(--ink-soft); max-width: 680px }
+
+        .tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px }
+        @media(max-width:820px) { .tools-grid { grid-template-columns: repeat(3, 1fr) } }
+        @media(max-width:520px) { .tools-grid { grid-template-columns: repeat(2, 1fr) } }
+        .tool { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px 12px; text-align: center; box-shadow: var(--shadow-soft); display: flex; flex-direction: column; align-items: center; gap: 10px; transition: transform .15s; }
+        .tool:hover { transform: translateY(-3px) }
+        .tool .ti { font-size: 28px }
+        .tool .tn { font-size: 13.5px; font-weight: 700; color: var(--ink) }
+
+        /* ===== FEATURE CARDS ===== */
+        .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px }
+        @media(max-width:740px) { .feat-grid { grid-template-columns: 1fr } }
+        .feat { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-soft); position: relative; }
+        .feat .ic { width: 52px; height: 52px; border-radius: 12px; background: var(--claude-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 1px solid #EED8CC; font-size: 22px; font-weight: 800; color: var(--claude-deep); }
+        .feat h3 { font-size: 17.5px; font-weight: 800; margin-bottom: 8px; line-height: 1.25 }
+        .feat p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.6 }
+        .feat .tag { display: inline-block; font-size: 11px; font-weight: 700; color: var(--claude-deep); background: var(--claude-soft); padding: 3px 10px; border-radius: 999px; margin-bottom: 12px }
+
+        /* ===== WHO IS IT FOR ===== */
+        .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px }
+        @media(max-width:740px) { .who-grid { grid-template-columns: repeat(2, 1fr) } }
+        @media(max-width:460px) { .who-grid { grid-template-columns: 1fr } }
+        .who { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 14.5px; font-weight: 600; display: flex; align-items: center; gap: 10px; box-shadow: var(--shadow-soft); }
+        .who::before { content: "✓"; color: var(--claude); font-weight: 800; flex: 0 0 auto }
+
+        /* ===== COMPARISON ===== */
+        .cmp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px }
+        @media(max-width:680px) { .cmp-grid { grid-template-columns: 1fr } }
+        .cmp { border-radius: var(--radius); padding: 26px 24px; border: 1px solid var(--line) }
+        .cmp.bad { background: #FBF7F4 }
+        .cmp.good { background: linear-gradient(160deg, var(--claude-tint), #fff); border-color: #EED8CC }
+        .cmp h3 { font-size: 19px; font-weight: 800; margin-bottom: 16px; display: flex; align-items: center; gap: 8px }
+        .cmp ul { list-style: none }
+        .cmp li { font-size: 14.5px; padding: 8px 0 8px 28px; position: relative; color: var(--ink-soft); border-bottom: 1px solid var(--line) }
+        .cmp li:last-child { border-bottom: none }
+        .cmp.bad li::before { content: "✕"; position: absolute; left: 0; color: #B9544A; font-weight: 800 }
+        .cmp.good li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 800 }
+
+        /* ===== BONUSES ===== */
+        .bonus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px }
+        @media(max-width:820px) { .bonus-grid { grid-template-columns: repeat(2, 1fr) } }
+        @media(max-width:520px) { .bonus-grid { grid-template-columns: 1fr } }
+        .bonus { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-soft); position: relative; }
+        .bonus .bnum { font-size: 12px; font-weight: 800; color: var(--claude-deep); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px }
+        .bonus .bic { font-size: 30px; margin-bottom: 12px }
+        .bonus h3 { font-size: 16px; font-weight: 800; margin-bottom: 12px; line-height: 1.3 }
+        .bonus .price { font-size: 15px; font-weight: 800 }
+        .bonus .price s { color: var(--ink-mute); font-weight: 600; margin-right: 8px }
+        .bonus .price .free { color: var(--green) }
+
+        /* ===== AUTHOR ===== */
+        .mentor { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-soft); display: flex; gap: 30px; align-items: flex-start; }
+        @media(max-width:740px) { .mentor { flex-direction: column; align-items: center; text-align: center; padding: 26px 20px; gap: 16px } }
+        .mentor .photo { flex: 0 0 160px; width: 160px; height: 160px; border-radius: 50%; overflow: hidden; border: 3px solid var(--claude-soft); box-shadow: var(--shadow-soft); background: var(--claude-soft); }
+        .mentor .photo img { width: 100%; height: 100%; object-fit: cover }
+
+        /* ===== AWARD BLOCK ===== */
+        .award-block { display: flex; gap: 24px; align-items: center; background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-soft); padding: 22px; margin-top: 18px; }
+        @media(max-width:680px) { .award-block { flex-direction: column; text-align: center } }
+        .award-block img { width: 130px; border-radius: 10px; border: 1px solid var(--line); flex: 0 0 130px }
+        .award-block h4 { font-size: 17px; font-weight: 800; margin-bottom: 6px }
+        .award-block p { font-size: 14px; color: var(--ink-soft); line-height: 1.6 }
+        .award-block .abadge { display: inline-block; font-size: 11px; font-weight: 800; color: var(--claude-deep); background: var(--claude-soft); padding: 3px 10px; border-radius: 999px; margin-bottom: 8px }
+        .mentor .stats { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px }
+        .mentor .stat { background: var(--claude-soft); color: var(--claude-deep); font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; border: 1px solid #EED8CC }
+        .mentor h2 { font-size: 26px; font-weight: 800; margin-bottom: 4px }
+        .mentor .role { font-size: 15px; color: var(--ink-mute); font-weight: 600; margin-bottom: 6px }
+        .mentor p { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 12px; line-height: 1.65 }
+
+        /* ===== FAQ ===== */
+        .faq-item { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-sm); margin-bottom: 12px; overflow: hidden }
+        .faq-q { padding: 18px 22px; font-weight: 700; font-size: 15.5px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 14px }
+        .faq-q::after { content: "+"; font-size: 22px; color: var(--claude); font-weight: 600; flex: 0 0 auto; transition: transform .2s }
+        .faq-item.open .faq-q::after { transform: rotate(45deg) }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; padding: 0 22px }
+        .faq-item.open .faq-a { max-height: 400px; padding: 0 22px 20px }
+        .faq-a p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.65 }
+
+        /* ===== STICKY BAR ===== */
+        .sticky { position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-top: 1px solid var(--line); box-shadow: 0 -6px 24px rgba(40,30,20,.1); padding: 12px 16px; display: none; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; }
+        @media(max-width:768px) { .sticky { display: flex } }
+        .sticky .price { font-size: 18px; font-weight: 800 }
+        .sticky .price s { color: var(--ink-mute); font-weight: 600; margin-right: 8px; font-size: 15px }
+        .sticky .btn { padding: 12px 32px; font-size: 15px }
+        @media(max-width:640px) { .sticky { gap: 10px; padding: 10px 12px } .sticky .btn { padding: 11px 26px; font-size: 14px } .sticky .price { font-size: 16px } }
+        .foot-space { height: 90px }
+
+        .final { background: linear-gradient(160deg, var(--claude-tint), #fff); border-radius: var(--radius); padding: 44px 26px; text-align: center; border: 1px solid #EED8CC }
+        .final h2 { font-size: clamp(24px, 3.6vw, 34px); font-weight: 800; margin-bottom: 10px }
+        .final p { font-size: 15.5px; color: var(--ink-soft); margin-bottom: 22px }
+
+        footer { text-align: center; padding: 30px 20px; color: var(--ink-mute); font-size: 13px }
+
+        :root { --safe-bottom: env(safe-area-inset-bottom, 0px) }
+        .mobile-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999; display: none; background: var(--bg); padding: 10px 16px calc(10px + var(--safe-bottom)); box-shadow: 0 -8px 25px rgba(0,0,0,.08); border-top: 1px solid var(--line) }
+        .mobile-sticky .ms-wrap { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px }
+        .mobile-sticky .ms-left { display: grid; gap: 2px }
+        .mobile-sticky .ms-label { color: var(--ink-soft); font-weight: 600; font-size: 12px; text-transform: uppercase }
+        .mobile-sticky .ms-price { font-weight: 900; font-size: 18px; color: var(--claude-deep) }
+        .mobile-sticky .ms-price s { color: var(--ink-mute); font-weight: 600; font-size: 13px; margin-right: 6px }
+        .mobile-sticky .ms-cta { background: var(--claude); color: #fff; font-weight: 700; font-size: 15px; padding: 10px 16px; border-radius: 8px; box-shadow: 0 4px 12px rgba(217,119,87,.2); user-select: none; transition: background-color .2s; white-space: nowrap; cursor: pointer }
+        .mobile-sticky .ms-cta:hover { background: var(--claude-deep) }
+        .mobile-sticky .ms-note { text-align: center; color: var(--ink-soft); font-size: 11px; margin-top: 6px; font-weight: 500 }
+        @media(max-width:768px) { .mobile-sticky { display: block } body.has-mobile-sticky { padding-bottom: calc(90px + var(--safe-bottom)) } }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP STRIP -->
+    <div class="topbar">
+        <span>📘 Instant PDF Download · Written From Real ₹24,560 Ad Spend</span>
+        <span><span class="stars">★★★★★</span> Real Campaigns, Real Numbers</span>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero wrap">
+
+        <h1>LEARN TO RUN <span class="hl-blue">PROFITABLE META ADS</span>, TRACK YOUR RESULTS THE RIGHT WAY & BUILD A <span class="hl-blue">SHOPIFY STORE</span> THAT SELLS EVERY DAY</h1>
+        <p class="sub">The complete Facebook &amp; Instagram Ads eBook for Indian entrepreneurs — Business Manager setup, audience targeting, ad creatives, budgeting, scaling to ₹50,000/day, and selling on Shopify. Written from real campaigns, real rupees, real results.</p>
+        <p class="note">(No prior experience with ads or Shopify needed — written for complete beginners)</p>
+        <p class="note">📰 MechServi (built by the author) has been featured in <a href="https://theindianalert.com/mechservi-building-indias-first-organized-auto-care-marketplace/" target="_blank" rel="noopener" style="color:var(--claude-deep);font-weight:700">The Indian Alert</a></p>
+
+        <div class="hero-grid">
+            <!-- LEFT: Book cover mockup (swap for your real cover image later) -->
+            <div class="book-cover">
+                <div class="bc-tag">2026 Edition</div>
+                <div class="bc-title">Meta Ads Mastery</div>
+                <div class="bc-sub">The Complete Facebook &amp; Instagram Ads Guide for Indian Entrepreneurs</div>
+                <div class="bc-author">Rishabh Shukla · Founder, MechServi</div>
+            </div>
+
+            <!-- RIGHT: Price, info, CTA -->
+            <div class="hero-right">
+                <div class="price-card">
+                    <span class="now">₹199</span>
+                    <span class="was">₹999</span>
+                    <span class="off">80% OFF</span>
+                </div>
+
+                <div class="dm-info-row">
+                    <div class="dm-info-card">
+                        <div class="dm-label">Format</div>
+                        <div class="dm-value">Instant PDF</div>
+                    </div>
+                    <div class="dm-info-card">
+                        <div class="dm-label">Pages</div>
+                        <div class="dm-value">Step-by-Step Guide</div>
+                    </div>
+                </div>
+
+                <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+                    Get Instant Access — ₹199 Only
+                    <small>(One-Time Payment · Lifetime Access)</small>
+                </a>
+                <p class="note">Delivered instantly to your email after payment · Bonuses worth <strong>₹2,000+</strong> included</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL RESULTS -->
+    <section class="section wrap">
+        <div class="shead">
+            <h2>These Aren't Made-Up Numbers — <span class="hl">Real Campaign Results</span></h2>
+            <p>From a live 30-day Meta Ads campaign run using the exact system taught inside this eBook.</p>
+        </div>
+        <div class="stat-grid">
+            <div class="stat-card"><div class="num">2,350+</div><div class="lbl">Leads Generated</div></div>
+            <div class="stat-card"><div class="num">15.69x</div><div class="lbl">ROAS Achieved</div></div>
+            <div class="stat-card"><div class="num">7.32%</div><div class="lbl">Conversion Rate</div></div>
+            <div class="stat-card"><div class="num">₹3.85L</div><div class="lbl">Revenue Tracked</div></div>
+        </div>
+
+        <div class="ratingline">
+            <div class="stars">★★★★★</div>
+            <div class="score">Built on 3+ years of real Meta Ads spend</div>
+            <div class="count">₹24,560 spent · 356 confirmed bookings · Full case study inside</div>
+        </div>
+        <br>
+        <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+            Get Instant Access — ₹199 Only
+            <small>(One-Time Payment · Lifetime Access)</small>
+        </a>
+    </section>
+
+    <!-- WHAT'S COVERED -->
+    <section class="section wrap">
+        <div class="shead">
+            <h2>What's Inside <span class="hl">Meta Ads Mastery</span></h2>
+            <p>Every tool and platform you'll actually use, explained in plain English.</p>
+        </div>
+
+        <div class="claude-core">
+            <div class="logo">📘</div>
+            <div>
+                <h3>Written By A Founder, Not A Theory Teacher</h3>
+                <h4>Real Campaigns. Real Rupees. Real Results.</h4>
+                <p>This eBook is written by Rishabh Shukla, Founder of MechServi, based on campaigns he has personally run and managed — not recycled theory. You get the exact Business Manager setup, targeting, creative, budgeting and scaling process used to generate 2,350+ leads and 15.69x ROAS.</p>
+            </div>
+        </div>
+
+        <div class="tools-grid">
+            <div class="tool"><div class="ti">📣</div><div class="tn">Meta Ads Manager</div></div>
+            <div class="tool"><div class="ti">📘</div><div class="tn">Facebook Ads</div></div>
+            <div class="tool"><div class="ti">📷</div><div class="tn">Instagram Ads</div></div>
+            <div class="tool"><div class="ti">🛍️</div><div class="tn">Shopify</div></div>
+            <div class="tool"><div class="ti">💬</div><div class="tn">WhatsApp Business</div></div>
+            <div class="tool"><div class="ti">🎨</div><div class="tn">Canva</div></div>
+            <div class="tool"><div class="ti">📊</div><div class="tn">Pixel &amp; Conversions API</div></div>
+            <div class="tool"><div class="ti">🤖</div><div class="tn">AI Ad-Copy Prompts</div></div>
+        </div>
+    </section>
+
+    <section class="section wrap" style="padding-top:15px">
+        <div class="cta-block">
+            <div class="big">Stop Guessing. Start Running Profitable Ads.</div>
+            <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+                Get Instant Access — ₹199 Only
+                <small>(One-Time Payment · Lifetime Access)</small>
+            </a>
+        </div>
+    </section>
+    <br>
+
+    <!-- CHAPTERS -->
+    <section class="section wrap">
+        <div class="shead">
+            <h2>What You Will Learn Inside <span class="hl">Every Chapter</span></h2>
+            <p>A complete, step-by-step system — from your first ad account to scaling to ₹50,000/day.</p>
+        </div>
+        <div class="feat-grid">
+            <div class="feat">
+                <div class="ic">1</div>
+                <span class="tag">Foundation</span>
+                <h3>Set Up Your Business Manager &amp; Ad Account The Right Way</h3>
+                <p>Most business owners get restricted before their first sale. Learn the exact Business Manager, ad account, Pixel and Conversions API setup — done right the first time.</p>
+            </div>
+            <div class="feat">
+                <div class="ic">2</div>
+                <span class="tag">Targeting</span>
+                <h3>Find Your Exact Customers</h3>
+                <p>Cold, warm and hot audiences, lookalikes, retargeting and audience research built specifically for Indian buyers.</p>
+            </div>
+            <div class="feat">
+                <div class="ic">3</div>
+                <span class="tag">Creative</span>
+                <h3>Ad Creatives, Copy &amp; 50 Ready Headlines</h3>
+                <p>20 ready-to-use ad copy templates, 50 proven headlines and AI prompts to create scroll-stopping visuals — even with zero design skill.</p>
+            </div>
+            <div class="feat">
+                <div class="ic">4</div>
+                <span class="tag">Budgeting</span>
+                <h3>Spend ₹1,000–₹3,000/Day Profitably</h3>
+                <p>Understand your unit economics, choose the right bid strategy, and know exactly what the numbers in Ads Manager actually mean.</p>
+            </div>
+            <div class="feat">
+                <div class="ic">5</div>
+                <span class="tag">Scaling</span>
+                <h3>Scale From ₹1,000 to ₹50,000 Per Day</h3>
+                <p>Vertical and horizontal scaling, creative refresh to prevent ad fatigue, and the exact rules used to scale winning campaigns responsibly.</p>
+            </div>
+            <div class="feat">
+                <div class="ic">6</div>
+                <span class="tag">Shopify</span>
+                <h3>Turn Ad Clicks Into Real Shopify Sales</h3>
+                <p>Set up your Shopify store, install your Pixel correctly, build a sales page that converts, and run a complete ads-to-checkout funnel.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section wrap" style="padding-top:15px">
+        <div class="cta-block">
+            <div class="big">Get The Complete System — Today</div>
+            <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+                Get Instant Access — ₹199 Only
+                <small>(One-Time Payment · Lifetime Access)</small>
+            </a>
+        </div>
+    </section>
+    <br>
+
+    <!-- WHO IS IT FOR -->
+    <section class="section wrap">
+        <div class="shead">
+            <h2>This eBook is <span class="hl">Built For</span> Anyone Who Wants Real Leads &amp; Sales</h2>
+            <p>No matter your industry — it works for…</p>
+        </div>
+        <div class="who-grid">
+            <div class="who">Shopify Store Owners</div>
+            <div class="who">D2C / eCommerce Sellers</div>
+            <div class="who">Small Business Owners</div>
+            <div class="who">Coaches &amp; Trainers</div>
+            <div class="who">Freelancers</div>
+            <div class="who">Digital Product Sellers</div>
+            <div class="who">Consultants</div>
+            <div class="who">Local Businesses</div>
+            <div class="who">Complete Beginners</div>
+        </div>
+    </section>
+
+    <section class="section wrap" style="padding-top:15px">
+        <div class="cta-block">
+            <div class="big">Get The Complete System — Today</div>
+            <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+                Get Instant Access — ₹199 Only
+                <small>(One-Time Payment · Lifetime Access)</small>
+            </a>
+        </div>
+    </section>
+    <br>
+
+    <!-- COMPARISON -->
+    <section class="section wrap">
+        <div class="shead">
+            <h2>Boosting Posts vs <span class="hl">Running Real Campaigns</span></h2>
+            <p>A simple comparison of two very different outcomes.</p>
+        </div>
+        <div class="cmp-grid">
+            <div class="cmp bad">
+                <h3>😕 Boosting Random Posts</h3>
+                <ul>
+                    <li>No targeting strategy, no tracking</li>
+                    <li>Money spent, no measurable results</li>
+                    <li>No idea what worked or why</li>
+                    <li>Business growth stays flat</li>
+                </ul>
+            </div>
+            <div class="cmp good">
+                <h3>⚡ Running Real Campaigns</h3>
+                <ul>
+                    <li>Correct Business Manager &amp; Pixel setup</li>
+                    <li>Targeting built for Indian buyers</li>
+                    <li>Every rupee tracked, every result explained</li>
+                    <li>A repeatable system to scale sales</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section wrap" style="padding-top:15px">
+        <div class="cta-block">
+            <div class="big">Get The Complete System — Today</div>
+            <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+                Get Instant Access — ₹199 Only
+                <small>(One-Time Payment · Lifetime Access)</small>
+            </a>
+        </div>
+    </section>
+    <br>
+
+    <!-- BONUSES -->
+    <section class="section wrap">
+        <div class="shead">
+            <h2>Buy Today &amp; Unlock Bonuses Worth <span class="hl">₹2,000+</span> Free</h2>
+            <p>Every bonus is included instantly with your purchase.</p>
+        </div>
+        <div class="bonus-grid">
+            <div class="bonus">
+                <div class="bnum">Bonus 1</div>
+                <div class="bic">✅</div>
+                <h3>Meta Ads Quick-Start Checklist</h3>
+                <div class="price"><s>₹499</s><span class="free">FREE</span></div>
+            </div>
+            <div class="bonus">
+                <div class="bnum">Bonus 2</div>
+                <div class="bic">💬</div>
+                <h3>Private WhatsApp Community Access</h3>
+                <div class="price"><span class="free">FREE</span></div>
+            </div>
+            <div class="bonus">
+                <div class="bnum">Bonus 3</div>
+                <div class="bic">🛍️</div>
+                <h3>Shopify Sales Page Copy Template</h3>
+                <div class="price"><s>₹299</s><span class="free">FREE</span></div>
+            </div>
+            <div class="bonus">
+                <div class="bnum">Bonus 4</div>
+                <div class="bic">🎨</div>
+                <h3>Ready-Made Canva Ad Templates</h3>
+                <div class="price"><s>₹999</s><span class="free">FREE</span></div>
+            </div>
+            <div class="bonus">
+                <div class="bnum">Bonus 5</div>
+                <div class="bic">🤖</div>
+                <h3>20 AI Prompts for Ad Copy &amp; Creatives</h3>
+                <div class="price"><s>₹499</s><span class="free">FREE</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section wrap" style="padding-top:15px">
+        <div class="cta-block">
+            <div class="big">Reserve Your Copy At ₹199 Before The Price Goes Up</div>
+            <div class="small">Regular price ₹999 · Bonuses worth ₹2,000+ included today only</div>
+            <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+                Get Instant Access — ₹199 Only
+                <small>(One-Time Payment · Lifetime Access)</small>
+            </a>
+        </div>
+    </section>
+    <br>
+
+    <!-- AUTHOR -->
+    <section class="section wrap">
+        <div class="shead" style="margin-bottom:16px">
+            <h2 style="font-size:clamp(30px,4vw,40px)">Meet The <span class="hl">Author</span></h2>
+        </div>
+        <div class="mentor">
+            <div class="photo"><img src="images/rishabh-shukla-photo.jpg" alt="Rishabh Shukla, Founder & CEO, MechServi"></div>
+            <div>
+                <h2>Rishabh Shukla</h2>
+                <div class="role">Founder &amp; CEO, MechServi · Meta Ads Expert · eCommerce Growth Strategist</div>
+                <div class="stats">
+                    <span class="stat">🏆 Entrepreneur of the Year 2025</span>
+                    <span class="stat">3+ Years Running Meta Ads</span>
+                    <span class="stat">Shopify Specialist</span>
+                </div>
+                <p>Hi, I'm Rishabh Shukla — Founder of MechServi, a doorstep automotive service startup I built from scratch, including its entire Meta Ads funnel (Ads → WhatsApp → Booking).</p>
+                <p>I've personally managed Meta &amp; Google Ads campaigns for SME clients across service, retail and eCommerce, and built Shopify stores from the ground up for offline businesses moving online. Everything in this eBook comes from campaigns I've actually run — not recycled theory.</p>
+                <div class="stats" style="margin-top:4px">
+                    <a class="stat" href="https://theindianalert.com/mechservi-building-indias-first-organized-auto-care-marketplace/" target="_blank" rel="noopener">📰 Featured: The Indian Alert</a>
+                    <a class="stat" href="https://www.linkedin.com/in/rishabh-shukla-896681a4/" target="_blank" rel="noopener">🔗 Connect on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="award-block">
+            <img src="images/entrepreneur-award-certificate.jpg" alt="Entrepreneur of the Year 2025 Certificate - The Indian Alert">
+            <div>
+                <div class="abadge">50 Entrepreneurs of the Year Awards 2025</div>
+                <h4>Certified "Entrepreneur of the Year 2025"</h4>
+                <p>Awarded by The Indian Alert (an initiative by DigiSharks Communications) on 23rd August 2025, for excellence in innovative tech platform automation — recognising the work behind MechServi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section wrap" style="padding-top:10px">
+        <div class="cta-block">
+            <div class="big">Get The Complete System — Today</div>
+            <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+                Get Instant Access — ₹199 Only
+                <small>(One-Time Payment · Lifetime Access)</small>
+            </a>
+        </div>
+    </section>
+    <br>
+
+    <!-- FAQ -->
+    <section class="section wrap">
+        <div class="shead">
+            <h2>Frequently Asked <span class="hl">Questions</span></h2>
+        </div>
+        <div id="faq">
+            <div class="faq-item">
+                <div class="faq-q">How do I get the eBook after payment?</div>
+                <div class="faq-a"><p>It's delivered instantly to your email as a downloadable PDF right after your payment is confirmed.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">I've never run Meta Ads. Is this for me?</div>
+                <div class="faq-a"><p>Yes. The eBook starts from the basics — Business Manager setup, Pixel installation — and walks you through everything step-by-step, even if you've never run a single ad.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Do I need to pay for any tool or software to follow along?</div>
+                <div class="faq-a"><p>No. Every strategy is built around free or low-cost tools (Meta Business Suite, Canva, WhatsApp Business) that any beginner can access.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Does this cover selling on Shopify too?</div>
+                <div class="faq-a"><p>Yes — there's a dedicated section on setting up your Shopify store, installing your Pixel correctly, and building a sales funnel from ad click to checkout.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Are the results in this eBook guaranteed?</div>
+                <div class="faq-a"><p>No. Results shown are from real campaigns the author has run personally, but ad performance depends on your product, budget, audience and execution — like any marketing skill, results vary.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is this a one-time payment?</div>
+                <div class="faq-a"><p>Yes — ₹199 is a one-time payment for lifetime access to the PDF and all bonuses.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section wrap">
+        <div class="final">
+            <h2>Ready to Run Profitable Meta Ads &amp; Grow Your Shopify Sales?</h2>
+            <p>Get the complete step-by-step system for ₹199 — instant download, lifetime access</p>
+            <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="cta-big" aria-label="Buy Now">
+                Get Instant Access — ₹199 Only
+                <small>(One-Time Payment · Lifetime Access)</small>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © Rishabh Shukla · MechServi. All rights reserved.<br> This site is not part of the Facebook website or Meta Platforms Inc. Additionally, this site is NOT endorsed by Meta in any way. Results shared are illustrative and not guaranteed.
+    </footer>
+
+    <div class="foot-space"></div>
+
+    <!-- STICKY BAR (desktop hidden via CSS, mobile uses mobile-sticky below) -->
+    <div class="sticky">
+        <span class="price"><s>₹999</s> ₹199</span>
+        <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="btn">Buy Now</a>
+    </div>
+
+    <script>
+        /* FAQ accordion */
+        document.querySelectorAll('.faq-item').forEach(function(item) {
+            item.querySelector('.faq-q').addEventListener('click', function() {
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+
+    <!-- MOBILE STICKY FOOTER -->
+    <div class="mobile-sticky" id="mobileSticky">
+        <div class="ms-wrap">
+            <div class="ms-left">
+                <div class="ms-label">Price today</div>
+                <div class="ms-price"><s>₹999</s> ₹199</div>
+            </div>
+            <a href="PASTE_YOUR_PAYMENT_LINK_HERE" class="ms-cta" aria-label="Buy Now">Buy Now</a>
+        </div>
+        <div class="ms-note">Instant PDF Delivery · Bonuses Worth ₹2,000+</div>
+    </div>
+
+    <script>
+        (function() {
+            var bar = document.getElementById('mobileSticky');
+            if (bar) document.body.classList.add('has-mobile-sticky');
+        })();
+    </script>
+
+</body>
+
+</html>
